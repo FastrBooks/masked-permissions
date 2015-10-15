@@ -1,7 +1,7 @@
-module.exports =
+module.exports = mp =
    hasPermission: (permission, permissionList) ->
       for p in permissionList
-         regex = @regexForPermission p
+         regex = mp.regexForPermission p
          return yes if regex.test permission
       no
 

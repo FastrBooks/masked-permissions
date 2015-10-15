@@ -60,3 +60,7 @@ describe 'Masked permissions', ->
 
        mp.hasPermission 'something::somew::hat::secret', ['something::*::secret']
        .should.be.false
+   
+   it 'can be called with any context', ->
+      mp.hasPermission.call {}, 'test', ['test']
+      .should.be.true
