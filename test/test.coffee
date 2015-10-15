@@ -1,5 +1,5 @@
 describe 'Masked permissions', ->
-   mp = require '../'
+   mp = require '../lib/index.coffee'
 
    it 'should match the exact permission', ->
       mp.hasPermission 'test', ['test']
